@@ -1,0 +1,9 @@
+.git
+
+**/.stack-work
+
+.vscode
+
+Dockerfile
+.dockerignore
+.github
