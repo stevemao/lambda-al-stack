@@ -14,11 +14,11 @@ RUN yum groupinstall -y "Development Tools"
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
-WORKDIR /root/lambda-function/
+WORKDIR /root/lambda-function-cache/
 
 # Build the deps
 RUN stack clean --full
 RUN yum install -y gmp-devel ncurses-devel postgresql-devel
 
-COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function/
+COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function-cache/
 RUN stack build --test --bench --dependencies-only
