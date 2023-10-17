@@ -18,6 +18,7 @@ WORKDIR /root/lambda-function/
 
 # Build the deps
 RUN stack clean --full
+RUN yum install -y gmp-devel ncurses-devel postgresql-devel
 
 COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function/
 RUN stack build --test --bench --dependencies-only
