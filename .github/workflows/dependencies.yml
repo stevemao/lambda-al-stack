@@ -1,0 +1,37 @@
+name: Update Haskell Stack dependencies
+
+on:
+  schedule:
+    - cron: 0 3 * * *
+
+jobs:
+    update:
+        permissions:
+            contents: write
+        name: Update dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout
+          id: checkout
+          uses: actions/checkout@v4
+
+        - name: Setup Stack
+          uses: haskell-actions/setup@v2
+          with:
+            enable-stack: true
+
+        - name: Update stack dependencies
+          id: bump-deps
+          uses: stevemao/dep-haskell-stack@v1.0.0
+        
+        - name: Create Pull Request
+          id: pr
+          uses: peter-evans/create-pull-request@v5
+          with:
+            branch: "al2-${{steps.bump-deps.outputs.resolver}}"
+
+        - name: Enable auto-merge for Dependabot PRs
+          run: gh pr merge --auto --merge "$PR_URL"
+          env:
+            PR_URL: ${{steps.pr.outputs.pull-request-url}}
