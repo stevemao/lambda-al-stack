@@ -22,3 +22,6 @@ RUN yum install -y gmp-devel ncurses-devel postgresql-devel
 
 COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function-cache/
 RUN stack build --test --bench --dependencies-only
+
+LABEL org.opencontainers.image.source="https://github.com/stevemao/lambda-al-stack"
+LABEL org.opencontainers.image.description="pre-build dependencies for Haskell stack on AWS Lambda using Amazon Linux"
