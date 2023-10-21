@@ -1,5 +1,5 @@
 name: Dependabot update AL_VERSION
-on: 
+on:
   push:
     branches:
       - main
@@ -10,7 +10,6 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Dependabot metadata
         id: metadata
