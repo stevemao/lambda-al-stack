@@ -29,7 +29,7 @@ jobs:
           id: pr
           uses: peter-evans/create-pull-request@v5
           with:
-            branch: "${{env.AL_VERSION}}-${{steps.bump-deps.outputs.resolver}}"
+            branch: "${{vars.AL_VERSION}}-${{steps.bump-deps.outputs.resolver}}"
 
         - name: Enable auto-merge for Dependabot PRs
           run: gh pr merge --auto --merge "$PR_URL"
