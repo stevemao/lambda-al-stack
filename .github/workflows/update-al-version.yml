@@ -1,8 +1,8 @@
 name: Dependabot update AL_VERSION
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: write
@@ -10,6 +10,7 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && github.actor == 'dependabot[bot]'
     steps:
       - name: Dependabot metadata
         id: metadata
