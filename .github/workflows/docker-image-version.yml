@@ -1,5 +1,5 @@
 #
-name: Create and publish a Docker image
+name: Create and publish Docker image (version tag)
 
 # Configures this workflow to run every time a pull request is merged to the branch called `main`.
 on:
