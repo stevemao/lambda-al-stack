@@ -6,11 +6,6 @@ on:
   push:
     branches:
       - main
-  merge_group:
-    branches: 
-      - main
-    types: 
-      - checks_requested
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -65,8 +60,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ steps.meta.outputs.tags }}

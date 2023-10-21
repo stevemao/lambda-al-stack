@@ -16,5 +16,5 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v1
       - name: Update AL version
-        if: ${{ steps.metadata.outputs.package-ecosystem == 'docker' && steps.metadata.outputs.dependency-names == 'public.ecr.aws/lambda/provided' }}
+        if: steps.metadata.outputs.package-ecosystem == 'docker' && contains(steps.metadata.outputs.dependency-names, 'public.ecr.aws/lambda/provided')
         run: gh variable set AL_VERSION --body ${{steps.metadata.outputs.new-version}}
