@@ -4,9 +4,8 @@ on:
     types:
       - closed
 
-permissions:
-  contents: write
-  actions: write
+env:
+  GITHUB_TOKEN: ${{ secrets.PAT }}
 
 jobs:
   dependabot:
@@ -20,4 +19,4 @@ jobs:
         if: steps.metadata.outputs.package-ecosystem == 'docker' && contains(steps.metadata.outputs.dependency-names, 'public.ecr.aws/lambda/provided')
         run: gh variable set AL_VERSION --body ${{steps.metadata.outputs.new-version}}
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ env.GITHUB_TOKEN }}
