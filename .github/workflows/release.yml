@@ -15,7 +15,7 @@ concurrency:
 
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
-  build-and-push-image:
+  release-tag:
     if: github.event.pull_request.merged == true
     timeout-minutes: 5
     runs-on: ubuntu-latest
