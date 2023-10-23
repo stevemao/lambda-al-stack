@@ -9,6 +9,7 @@ jobs:
         permissions:
             contents: write
             pull-requests: write
+            actions: write
         name: Update dependencies
         runs-on: ubuntu-latest
 
