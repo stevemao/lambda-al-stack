@@ -36,3 +36,4 @@ jobs:
           run: gh pr merge --auto --merge "$PR_URL"
           env:
             PR_URL: ${{steps.pr.outputs.pull-request-url}}
+            GH_TOKEN: ${{ github.token }}
