@@ -9,6 +9,9 @@ on:
     types:
       - closed
 
+env:
+  GITHUB_TOKEN: ${{ secrets.PAT }}
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -37,3 +40,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.get_tag_name.outputs.value }}
+          token: ${{ env.GITHUB_TOKEN }}
