@@ -34,7 +34,7 @@ jobs:
           id: pr
           uses: peter-evans/create-pull-request@v5
           with:
-            branch: "${{vars.AL_VERSION}}-${{steps.bump-deps.outputs.new-resolver}}"
+            branch: "bot-${{vars.AL_VERSION}}-${{steps.bump-deps.outputs.new-resolver}}"
             token: ${{ env.GITHUB_TOKEN }}
             commit-message: "Update resolver from ${{steps.bump-deps.outputs.previous-resolver}} to ${{steps.bump-deps.outputs.new-resolver}}"
             title: "Update resolver from ${{steps.bump-deps.outputs.previous-resolver}} to ${{steps.bump-deps.outputs.new-resolver}}"

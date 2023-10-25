@@ -26,7 +26,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Get tag name
+        uses: mad9000/actions-find-and-replace-string@3
+        id: get_tag_name
+        with:
+          source: ${{ github.event.pull_request.head.ref }}
+          find: 'bot-'       
+          replace: '' 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.pull_request.head.ref  }}
+          tag_name: ${{ steps.get_tag_name.outputs.value }}
