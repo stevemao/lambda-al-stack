@@ -62,7 +62,7 @@ packages:
     hackage: amazonka-ses-2.0
 snapshots:
 - completed:
-    sha256: b641356138a6f1132531e2a0747f0b4cd5906527821f2d17829998015ba15759
-    size: 640042
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/21/18.yaml
-  original: lts-21.18
+    sha256: fb482b8e2d5d061cdda4ba1da2957c012740c893a5ee1c1b99001adae7b1fbe7
+    size: 640046
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/21/19.yaml
+  original: lts-21.19
