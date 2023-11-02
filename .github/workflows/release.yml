@@ -37,5 +37,5 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: "${{ github.event.pull_request.head.ref }}-${{ steps.current-time.outputs.formattedTime }}"
+          tag_name: "${{ github.event.pull_request.head.ref }}-${{ steps.current-time.outputs.time }}"
           token: ${{ env.GITHUB_TOKEN }}
