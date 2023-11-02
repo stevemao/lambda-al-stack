@@ -36,8 +36,11 @@ jobs:
           source: ${{ github.event.pull_request.head.ref }}
           find: 'bot-'       
           replace: '' 
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@master
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.get_tag_name.outputs.value }}
+          tag_name: "${{ steps.get_tag_name.outputs.value }}-${{ steps.time.outputs.time }}"
           token: ${{ env.GITHUB_TOKEN }}
