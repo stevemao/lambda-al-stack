@@ -32,6 +32,8 @@ jobs:
       - name: Get current time
         uses: josStorer/get-current-time@v2
         id: current-time
+        with:
+          format: YYYY-MM-DD-hh-mm-ss
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
