@@ -35,7 +35,7 @@ jobs:
           uses: peter-evans/create-pull-request@v5
           env:
             commit-message:
-              "${{steps.bump-deps.outputs.previous-resolver == steps.bump-deps.outputs.new-resolver && 'Update dependencies' || 'Update resolver from ${{steps.bump-deps.outputs.previous-resolver}} to ${{steps.bump-deps.outputs.new-resolver}}' }}"
+              ${{ steps.bump-deps.outputs.previous-resolver == steps.bump-deps.outputs.new-resolver && 'Update dependencies' || format('Update resolver from {0} to {1}', steps.bump-deps.outputs.previous-resolver, steps.bump-deps.outputs.new-resolver) }}
           with:
             branch: "${{vars.AL_VERSION}}-${{steps.bump-deps.outputs.new-resolver}}"
             token: ${{ env.GITHUB_TOKEN }}
