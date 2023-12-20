@@ -9,6 +9,7 @@ SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
+RUN dnf groupinfo "Development Tools"
 RUN dnf group install "Development Tools"
 
 # Installing Haskell Stack
