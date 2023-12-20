@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
-RUN dnf groupinstall -y "Development Tools"
+RUN dnf groupin stall -y "Development Tools"
 
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
