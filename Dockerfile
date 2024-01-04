@@ -3,13 +3,13 @@
 ARG OUTPUT_DIR=/root/output
 ARG EXECUTABLE_NAME=bootstrap
 
-FROM public.ecr.aws/lambda/provided:al2-arm64 as dependencies
+FROM public.ecr.aws/lambda/provided:al2023-arm64 as dependencies
 
 SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
-RUN yum groupinstall -y "Development Tools"
+RUN dnf install -y tar xz
 
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
@@ -18,7 +18,8 @@ WORKDIR /root/lambda-function-cache/
 
 # Build the deps
 RUN stack clean --full
-RUN yum install -y gmp-devel ncurses-devel postgresql-devel libffi libtinfo
+
+RUN dnf install -y zlib-devel gmp-devel ncurses-devel postgresql-devel
 
 COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function-cache/
 RUN stack build --lock-file error-on-write --test --bench --dependencies-only --verbose
