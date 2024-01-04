@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
-RUN dnf install -y tar
+RUN dnf install -y tar xz
 
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
