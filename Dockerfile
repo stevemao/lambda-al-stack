@@ -18,7 +18,7 @@ WORKDIR /root/lambda-function-cache/
 
 # Build the deps
 RUN stack clean --full
-RUN dnf install -y gmp-devel ncurses-devel postgresql-devel
+RUN dnf install -y zlib-devel gmp-devel ncurses-devel postgresql-devel
 
 COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function-cache/
 RUN stack build --lock-file error-on-write --test --bench --dependencies-only
