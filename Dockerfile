@@ -9,8 +9,7 @@ SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
-RUN dnf group info "Development Tools"
-RUN dnf group install "Development Tools"
+RUN dnf install -y gcc make zlib-devel
 
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
