@@ -19,7 +19,7 @@ env:
 jobs:
   build-and-push-image:
     timeout-minutes: 45
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: write
