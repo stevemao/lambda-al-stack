@@ -103,7 +103,6 @@ library:
   - multipart
   - time-compat
   - template-haskell
-  - opentelemetry
   default-extensions:
   - DataKinds
   - FlexibleContexts
