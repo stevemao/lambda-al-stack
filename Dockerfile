@@ -3,7 +3,7 @@
 ARG OUTPUT_DIR=/root/output
 ARG EXECUTABLE_NAME=bootstrap
 
-FROM public.ecr.aws/lambda/provided:al2 as dependencies
+FROM public.ecr.aws/lambda/provided:al2-arm64 as dependencies
 
 SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
