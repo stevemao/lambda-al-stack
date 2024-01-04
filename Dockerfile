@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
 USER root
 
-RUN dnf install -y gcc make zlib-devel
+RUN dnf install -y tar
 
 # Installing Haskell Stack
 RUN curl -sSL https://get.haskellstack.org/ | sh
