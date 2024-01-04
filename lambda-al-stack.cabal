@@ -82,7 +82,6 @@ library
     , multipart
     , network-uri
     , opaleye
-    , opentelemetry
     , polysemy
     , polysemy-plugin
     , polysemy-zoo
