@@ -3,7 +3,7 @@
 ARG OUTPUT_DIR=/root/output
 ARG EXECUTABLE_NAME=bootstrap
 
-FROM public.ecr.aws/lambda/provided:al2023 as dependencies
+FROM public.ecr.aws/lambda/provided:al2023-arm64 as dependencies
 
 SHELL ["/bin/bash", "--rcfile", "~/.profile", "-c"]
 
@@ -18,6 +18,7 @@ WORKDIR /root/lambda-function-cache/
 
 # Build the deps
 RUN stack clean --full
+
 RUN dnf install -y zlib-devel gmp-devel ncurses-devel postgresql-devel
 
 COPY stack.yaml stack.yaml.lock *.cabal package.yaml /root/lambda-function-cache/
