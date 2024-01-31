@@ -73,6 +73,7 @@ library
     , http-conduit
     , http-media
     , http-types
+    , iso639
     , jose
     , lens
     , memory
