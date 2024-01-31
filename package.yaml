@@ -103,6 +103,7 @@ library:
   - multipart
   - time-compat
   - template-haskell
+  - iso639
   default-extensions:
   - DataKinds
   - FlexibleContexts
