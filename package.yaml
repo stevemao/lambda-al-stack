@@ -104,6 +104,7 @@ library:
   - time-compat
   - template-haskell
   - iso639
+  - extra
   default-extensions:
   - DataKinds
   - FlexibleContexts
