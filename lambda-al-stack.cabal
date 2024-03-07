@@ -63,6 +63,7 @@ library
     , directory
     , dlist
     , exceptions
+    , extra
     , filepath
     , generic-lens
     , hashable
