@@ -105,6 +105,7 @@ library:
   - template-haskell
   - iso639
   - extra
+  - aeson-schemas
   default-extensions:
   - DataKinds
   - FlexibleContexts
