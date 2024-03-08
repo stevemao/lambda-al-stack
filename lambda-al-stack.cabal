@@ -61,6 +61,7 @@ library
     , conduit-extra
     , containers
     , cryptonite
+    , deriving-aeson
     , directory
     , dlist
     , exceptions
@@ -78,6 +79,7 @@ library
     , iso639
     , jose
     , lens
+    , lens-aeson
     , memory
     , mime-types
     , monad-time
@@ -129,6 +131,7 @@ test-suite lambda-al-stack-test
   build-depends:
       QuickCheck
     , aeson
+    , aeson-qq
     , base >=4.7 && <5
     , bytestring
     , extra
