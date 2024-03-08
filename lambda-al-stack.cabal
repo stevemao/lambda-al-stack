@@ -43,6 +43,7 @@ library
   ghc-options: -Wall -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   build-depends:
       aeson
+    , aeson-schemas
     , amazonka
     , amazonka-apigatewaymanagementapi
     , amazonka-s3
