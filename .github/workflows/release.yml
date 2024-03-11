@@ -35,7 +35,7 @@ jobs:
         with:
           format: YYYY-MM-DD-hh-mm-ss
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: "${{ github.event.pull_request.head.ref }}-${{ steps.current-time.outputs.formattedTime }}"
           token: ${{ env.GITHUB_TOKEN }}
