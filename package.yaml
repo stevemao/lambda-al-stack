@@ -108,6 +108,7 @@ library:
   - template-haskell
   - iso639
   - extra
+  - hs-opentelemetry-instrumentation-auto
   default-extensions:
   - DataKinds
   - FlexibleContexts

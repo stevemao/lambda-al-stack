@@ -48,6 +48,11 @@ extra-deps:
   - amazonka-apigatewaymanagementapi-2.0
   - amazonka-s3-2.0
   - amazonka-ses-2.0
+  - hs-opentelemetry-instrumentation-auto-0.1.0.0
+  - hs-opentelemetry-api-0.1.0.0
+  - toml-parser-2.0.0.0
+  - thread-utils-context-0.3.0.4
+  - thread-utils-finalizers-0.1.1.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
