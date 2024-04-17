@@ -109,6 +109,7 @@ library:
   - iso639
   - extra
   - hs-opentelemetry-instrumentation-auto
+  - email-validate
   default-extensions:
   - DataKinds
   - FlexibleContexts
