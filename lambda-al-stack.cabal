@@ -64,6 +64,7 @@ library
     , deriving-aeson
     , directory
     , dlist
+    , email-validate
     , exceptions
     , extra
     , filepath
