@@ -43,6 +43,7 @@ library
   ghc-options: -Wall -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   build-depends:
       aeson
+    , aeson-schemas
     , amazonka
     , amazonka-apigatewaymanagementapi
     , amazonka-s3
@@ -60,13 +61,16 @@ library
     , conduit-extra
     , containers
     , cryptonite
+    , deriving-aeson
     , directory
     , dlist
     , exceptions
+    , extra
     , filepath
     , generic-lens
     , hashable
     , hedis
+    , hs-opentelemetry-instrumentation-auto
     , html-entities
     , http-api-data
     , http-client
@@ -76,6 +80,7 @@ library
     , iso639
     , jose
     , lens
+    , lens-aeson
     , memory
     , mime-types
     , monad-time
@@ -127,6 +132,7 @@ test-suite lambda-al-stack-test
   build-depends:
       QuickCheck
     , aeson
+    , aeson-qq
     , base >=4.7 && <5
     , bytestring
     , extra

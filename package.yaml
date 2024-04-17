@@ -37,6 +37,9 @@ library:
   - -fplugin=Polysemy.Plugin
   dependencies:
   - aeson
+  - aeson-schemas
+  - lens-aeson
+  - deriving-aeson
   - unordered-containers
   - product-profunctors
   - text
@@ -104,6 +107,8 @@ library:
   - time-compat
   - template-haskell
   - iso639
+  - extra
+  - hs-opentelemetry-instrumentation-auto
   default-extensions:
   - DataKinds
   - FlexibleContexts
@@ -139,5 +144,6 @@ tests:
     - vector
     - safe
     - text-show
+    - aeson-qq
     default-extensions:
     - StandaloneDeriving
