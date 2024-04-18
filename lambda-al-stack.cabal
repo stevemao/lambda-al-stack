@@ -95,6 +95,7 @@ library
     , postgresql-simple
     , product-profunctors
     , profunctors
+    , regex-tdfa
     , resourcet
     , safe
     , safe-exceptions-checked
