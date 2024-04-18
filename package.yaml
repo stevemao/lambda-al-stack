@@ -109,6 +109,8 @@ library:
   - iso639
   - extra
   - hs-opentelemetry-instrumentation-auto
+  - email-validate
+  - regex-tdfa
   default-extensions:
   - DataKinds
   - FlexibleContexts
