@@ -46,7 +46,6 @@ library
     , aeson-schemas
     , amazonka
     , amazonka-apigatewaymanagementapi
-    , amazonka-contrib-rds-utils
     , amazonka-s3
     , amazonka-ses
     , attoparsec
