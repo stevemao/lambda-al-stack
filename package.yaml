@@ -62,6 +62,7 @@ library:
   - amazonka-ses
   - amazonka-s3
   - amazonka-apigatewaymanagementapi
+  - amazonka-rds
   - shakespeare
   - blaze-html
   - profunctors
