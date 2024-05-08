@@ -61,6 +61,20 @@ packages:
   original:
     hackage: amazonka-ses-2.0
 - completed:
+    hackage: amazonka-rds-2.0@sha256:678688f00aacf45a5d637f8053c067c489214e8cf1862ef228904d643fe3a298,13571
+    pantry-tree:
+      sha256: 9e15f29091371dfee5f684c0d6cc6a468fff39404f459fb78df9caf6d3b69a12
+      size: 46592
+  original:
+    hackage: amazonka-rds-2.0
+- completed:
+    hackage: amazonka-contrib-rds-utils-1.6.1.1@sha256:0e51e548f1bf8d9a6b0e4b87c0c4dda1c28c98b06ee10e08b1c7ffe442dddc59,3075
+    pantry-tree:
+      sha256: 2cc6b0b366f752b8e69c0e626b243374814b33898381c252dff9a0072f093882
+      size: 346
+  original:
+    hackage: amazonka-contrib-rds-utils-1.6.1.1
+- completed:
     hackage: hs-opentelemetry-instrumentation-auto-0.1.0.0@sha256:00e6c1298cbf824da224458de6d9c0d40f7847d05905f1a7d680b757f52d0c6a,2291
     pantry-tree:
       sha256: a667f506a40a016c4f7e6f5ce3d7c9235c1631f322c2ca916af8ca03fe95407f

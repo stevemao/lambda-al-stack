@@ -111,6 +111,7 @@ library:
   - hs-opentelemetry-instrumentation-auto
   - email-validate
   - regex-tdfa
+  - amazonka-contrib-rds-utils
   default-extensions:
   - DataKinds
   - FlexibleContexts
