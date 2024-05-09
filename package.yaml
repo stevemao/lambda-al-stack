@@ -113,6 +113,7 @@ library:
   - hs-opentelemetry-instrumentation-auto
   - email-validate
   - regex-tdfa
+  - network
   default-extensions:
   - DataKinds
   - FlexibleContexts
