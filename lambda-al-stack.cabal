@@ -89,6 +89,7 @@ library
     , monad-time
     , mtl
     , multipart
+    , network
     , network-uri
     , opaleye
     , polysemy
