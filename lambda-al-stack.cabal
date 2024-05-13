@@ -71,6 +71,7 @@ library
     , extra
     , filepath
     , generic-lens
+    , ghc
     , hashable
     , hedis
     , hs-opentelemetry-instrumentation-auto

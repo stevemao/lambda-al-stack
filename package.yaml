@@ -36,6 +36,7 @@ library:
   ghc-options:
   - -fplugin=Polysemy.Plugin
   dependencies:
+  - ghc
   - aeson
   - aeson-schemas
   - lens-aeson
