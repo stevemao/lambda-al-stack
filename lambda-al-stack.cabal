@@ -46,6 +46,8 @@ library
     , aeson-schemas
     , amazonka
     , amazonka-apigatewaymanagementapi
+    , amazonka-core
+    , amazonka-rds
     , amazonka-s3
     , amazonka-ses
     , attoparsec
@@ -87,6 +89,7 @@ library
     , monad-time
     , mtl
     , multipart
+    , network
     , network-uri
     , opaleye
     , polysemy

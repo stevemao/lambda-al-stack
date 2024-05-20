@@ -62,6 +62,8 @@ library:
   - amazonka-ses
   - amazonka-s3
   - amazonka-apigatewaymanagementapi
+  - amazonka-core
+  - amazonka-rds
   - shakespeare
   - blaze-html
   - profunctors
@@ -111,6 +113,7 @@ library:
   - hs-opentelemetry-instrumentation-auto
   - email-validate
   - regex-tdfa
+  - network
   default-extensions:
   - DataKinds
   - FlexibleContexts
