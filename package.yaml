@@ -114,6 +114,7 @@ library:
   - email-validate
   - regex-tdfa
   - network
+  - tzdata
   default-extensions:
   - DataKinds
   - FlexibleContexts
