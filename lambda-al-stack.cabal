@@ -113,6 +113,7 @@ library
     , time
     , time-compat
     , transformers
+    , tzdata
     , unix
     , unliftio-core
     , unordered-containers

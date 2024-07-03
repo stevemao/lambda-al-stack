@@ -82,9 +82,9 @@ packages:
   original:
     hackage: hs-opentelemetry-api-0.1.0.0
 - completed:
-    hackage: toml-parser-2.0.0.0@sha256:3c0cc47aa740a8a9d6f01c444cc57d09e1f74f5242479e00947770bf3da6d29e,3811
+    hackage: toml-parser-2.0.0.0@sha256:1b3bb8661684c4c917a2cd4530c5c813656c64a657528bcc723bf6919bcafd08,3979
     pantry-tree:
-      sha256: 27ca05b9fe46ed5b36d47c646716e350781e553a70f337a2f36cecde66bbd5a2
+      sha256: 864a560f705a82f76e3190013d63b8d725bc92ab82d3ed6d88741c588e555264
       size: 2304
   original:
     hackage: toml-parser-2.0.0.0
