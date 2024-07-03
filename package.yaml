@@ -115,6 +115,7 @@ library:
   - regex-tdfa
   - network
   - tzdata
+  - http-media
   default-extensions:
   - DataKinds
   - FlexibleContexts
